@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+        <meta charset="utf-8" />
+        <title>Buskined bioinformatics - Tech</title>
+        <link rel="stylesheet" href="/theme/css/main.css" />
+
+        <!--[if IE]>
+            <script src="http://html5shiv.googlecode.com/svn/trunk/html5.js"></script>
+        <![endif]-->
+</head>
+
+<body id="index" class="home">
+        <header id="banner" class="body">
+                <h1><a href="/">Buskined bioinformatics </a></h1>
+                <nav><ul>
+                    <li><a href="/category/aboutme.html">aboutme</a></li>
+                    <li class="active"><a href="/category/tech.html">Tech</a></li>
+                </ul>
+                </nav>
+        </header><!-- /#banner -->
+
+            <aside id="featured" class="body">
+                <article>
+                    <h1 class="entry-title"><a href="/start-a-ipython-notebook-server-with-password-login.html">Start a ipython notebook server with password login</a></h1>
+<footer class="post-info">
+        <span>周三 18 六月 2014</span>
+<span>| tags: <a href="/tag/python.html">python</a></span>
+</footer><!-- /.post-info --><blockquote>
+<p>As I finally realized that, to install a rpy2 package on Windows is almost a mission impossible,  I decide to install a ipython notebook server on the remote machine instead. So I can generate the R script from python and run by "R cmd run run.r". Naive, but it works...</p>
+</blockquote>
+<p>The <a href="http://ipython.org/ipython-doc/1/interactive/public_server.html">offical website</a> suggest to use SSL in login, however, I may have to use the server with public computer. So password login should be more convenient.</p>
+<blockquote>
+<p>Here is the step: </p>
+</blockquote>
+<h4>1. First, create a hashed password.</h4>
+<div class="highlight"><pre><span class="n">In</span> <span class="p">[</span><span class="mi">1</span><span class="p">]:</span> <span class="kn">from</span> <span class="nn">IPython.lib</span> <span class="kn">import</span> <span class="n">passwd</span>
+<span class="n">In</span> <span class="p">[</span><span class="mi">2</span><span class="p">]:</span> <span class="n">passwd</span><span class="p">()</span>
+<span class="n">Enter</span> <span class="n">password</span><span class="p">:</span>
+<span class="n">Verify</span> <span class="n">password</span><span class="p">:</span>
+<span class="n">Out</span><span class="p">[</span><span class="mi">3</span><span class="p">]:</span> <span class="s">&#39;sha1:5dd097...&#39;</span>
+</pre></div>
+
+
+<h4>2. Create a custom profile for the notebook, with the following command line, type:</h4>
+<div class="highlight"><pre><span class="nv">$ </span>ipython profile create nbserver
+</pre></div>
+
+
+<h4>3. Change the Config file(ipython_notebook_config.py), add the following lines,</h4>
+<div class="highlight"><pre><span class="n">c</span> <span class="o">=</span> <span class="n">get_config</span><span class="p">()</span>
+
+<span class="cp"># Kernel config</span>
+<span class="n">c</span><span class="p">.</span><span class="n">IPKernelApp</span><span class="p">.</span><span class="n">pylab</span> <span class="o">=</span> <span class="err">&#39;</span><span class="kr">inline</span><span class="err">&#39;</span>  <span class="err">#</span> <span class="k">if</span> <span class="n">you</span> <span class="n">want</span> <span class="n">plotting</span> <span class="n">support</span> <span class="n">always</span>
+
+<span class="cp"># Notebook config</span>
+<span class="n">c</span><span class="p">.</span><span class="n">NotebookApp</span><span class="p">.</span><span class="n">certfile</span> <span class="o">=</span> <span class="n">u</span><span class="err">&#39;</span><span class="o">/</span><span class="n">absolute</span><span class="o">/</span><span class="n">path</span><span class="o">/</span><span class="n">to</span><span class="o">/</span><span class="n">your</span><span class="o">/</span><span class="n">certificate</span><span class="o">/</span><span class="n">mycert</span><span class="p">.</span><span class="n">pem</span><span class="err">&#39;</span>
+<span class="n">c</span><span class="p">.</span><span class="n">NotebookApp</span><span class="p">.</span><span class="n">ip</span> <span class="o">=</span> <span class="sc">&#39;*&#39;</span>
+<span class="n">c</span><span class="p">.</span><span class="n">NotebookApp</span><span class="p">.</span><span class="n">open_browser</span> <span class="o">=</span> <span class="n">False</span>
+<span class="n">c</span><span class="p">.</span><span class="n">NotebookApp</span><span class="p">.</span><span class="n">password</span> <span class="o">=</span> <span class="n">u</span><span class="err">&#39;</span><span class="n">sha1</span><span class="o">:</span><span class="mi">5</span><span class="n">dd097</span><span class="p">...</span><span class="err">&#39;</span><span class="p">[</span><span class="n">the</span> <span class="n">hashed</span> <span class="n">password</span> <span class="n">generated</span> <span class="n">by</span>  <span class="n">IPython</span><span class="p">.</span><span class="n">lib</span><span class="p">.</span><span class="n">passwd</span><span class="p">]</span><span class="err">&#39;</span>
+<span class="cp"># Define a port</span>
+<span class="n">c</span><span class="p">.</span><span class="n">NotebookApp</span><span class="p">.</span><span class="n">port</span> <span class="o">=</span> <span class="mi">8888</span>
+</pre></div>
+
+
+<h4>4. Make it run:</h4>
+<div class="highlight"><pre>ipython notebook --profile<span class="o">=</span>nbserver
+</pre></div>
+
+
+<p>Then the server can be accessed by using the "http://server_IP:8888" , you will have to enter the password for login.</p><p><a href="/start-a-ipython-notebook-server-with-password-login.html#disqus_thread">comments</a></p>                </article>
+            </aside><!-- /#featured -->
+                <section id="content" class="body">
+                    <h1>Other articles</h1>
+                    <ol id="posts-list" class="hfeed">
+
+            <li><article class="hentry">
+                <header>
+                    <h1><a href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html" rel="bookmark"
+                           title="Permalink to 使用pelican搭建基于git的静态博客">使用pelican搭建基于git的静态博客</a></h1>
+                </header>
+
+                <div class="entry-content">
+<footer class="post-info">
+        <span>周二 17 六月 2014</span>
+<span>| tags: <a href="/tag/python.html">python</a></span>
+</footer><!-- /.post-info -->                <p>Just the test code for the first pelican upload.</p>
+                <a class="readmore" href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">read more</a>
+<p><a href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html#disqus_thread">comments</a></p>                </div><!-- /.entry-content -->
+            </article></li>
+            </ol><!-- /#posts-list -->
+<p class="paginator">
+    Page 1 / 1
+</p>
+            </section><!-- /#content -->
+        <section id="extras" class="body">
+                <div class="social">
+                        <h2>social</h2>
+                        <ul>
+
+                            <li><a href="http://runsheng.github.io">blog</a></li>
+                            <li><a href="http://www.weibo.com/u/2176571792">weibo</a></li>
+                        </ul>
+                </div><!-- /.social -->
+        </section><!-- /#extras -->
+
+        <footer id="contentinfo" class="body">
+                <p>Powered by <a href="http://getpelican.com/">Pelican</a>. Theme <a href="https://github.com/blueicefield/pelican-blueidea/">blueidea</a>, inspired by the default theme.</p>
+        </footer><!-- /#contentinfo -->
+
+<script type="text/javascript">
+    var disqus_shortname = 'runshengli';
+    (function () {
+        var s = document.createElement('script'); s.async = true;
+        s.type = 'text/javascript';
+        s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+        (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+    }());
+</script>
+</body>
+</html>
