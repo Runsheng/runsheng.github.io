@@ -1,7 +1,6 @@
 .highlight pre .hll { background-color: #404040 }
 .highlight pre  { background: #202020; color: #d0d0d0 }
 .highlight pre .c { color: #999999; font-style: italic } /* Comment */
-.highlight pre .err { color: #a61717; background-color: #e3d2d2 } /* Error */
 .highlight pre .esc { color: #d0d0d0 } /* Escape */
 .highlight pre .g { color: #d0d0d0 } /* Generic */
 .highlight pre .k { color: #6ab825; font-weight: bold } /* Keyword */
@@ -16,7 +15,6 @@
 .highlight pre .cs { color: #e50808; font-weight: bold; background-color: #520000 } /* Comment.Special */
 .highlight pre .gd { color: #d22323 } /* Generic.Deleted */
 .highlight pre .ge { color: #d0d0d0; font-style: italic } /* Generic.Emph */
-.highlight pre .gr { color: #d22323 } /* Generic.Error */
 .highlight pre .gh { color: #ffffff; font-weight: bold } /* Generic.Heading */
 .highlight pre .gi { color: #589819 } /* Generic.Inserted */
 .highlight pre .go { color: #cccccc } /* Generic.Output */
