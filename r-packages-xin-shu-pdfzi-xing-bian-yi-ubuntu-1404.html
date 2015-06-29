@@ -1,0 +1,255 @@
+<!DOCTYPE html>
+<html lang="en"
+>
+<head>
+    <title>R packages 新书 PDF自行编译 (ubuntu 14.04) - Buskined bioinformatics</title>
+    <!-- Using the latest rendering mode for IE -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+
+
+<link rel="canonical" href="http://runsheng.github.io/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html">
+
+        <meta name="author" content="runsheng" />
+        <meta name="keywords" content="R" />
+        <meta name="description" content="R packages 新书 PDF自行编译 (ubuntu 14.04) 前段日子Hadley Wickham的新书 &#39;R packages&#39;也算是上线了，美亚有售实体版。 不过本书的所有资源包括原文和代码都可以在github以及网站上找到，所以其实是开源的。 网页版本很漂亮读起来也很不错甚至可以本地编译网站(Ruby based)，但是我辈diaosi还是想看pdf。 Hadley其实写了build-book.r，只要有R和LaTeX就可以生成pdf，步骤简介如下(看了Brett Klamer的blog, 一路走下来,果断没成...稍微改了下步骤): 1. 下载 git clone https://github.com/hadley/r-pkgs/ 可以看到/book/目录下的build-book.r, 里面需要载入rmarkdown和bookdown两个library.所以下载之. 2 ..." />
+
+        <meta property="og:site_name" content="Buskined bioinformatics" />
+        <meta property="og:type" content="article"/>
+        <meta property="og:title" content="R packages 新书 PDF自行编译 (ubuntu 14.04)"/>
+        <meta property="og:url" content="http://runsheng.github.io/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html"/>
+        <meta property="og:description" content="R packages 新书 PDF自行编译 (ubuntu 14.04) 前段日子Hadley Wickham的新书 &#39;R packages&#39;也算是上线了，美亚有售实体版。 不过本书的所有资源包括原文和代码都可以在github以及网站上找到，所以其实是开源的。 网页版本很漂亮读起来也很不错甚至可以本地编译网站(Ruby based)，但是我辈diaosi还是想看pdf。 Hadley其实写了build-book.r，只要有R和LaTeX就可以生成pdf，步骤简介如下(看了Brett Klamer的blog, 一路走下来,果断没成...稍微改了下步骤): 1. 下载 git clone https://github.com/hadley/r-pkgs/ 可以看到/book/目录下的build-book.r, 里面需要载入rmarkdown和bookdown两个library.所以下载之. 2 ..."/>
+        <meta property="article:published_time" content="2015-06-29" />
+            <meta property="article:section" content="中文" />
+            <meta property="article:tag" content="R" />
+            <meta property="article:author" content="runsheng" />
+
+
+    <!-- Bootstrap -->
+        <link rel="stylesheet" href="http://runsheng.github.io/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="http://runsheng.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+
+    <link href="http://runsheng.github.io/theme/css/pygments/native.css" rel="stylesheet">
+    <link rel="stylesheet" href="http://runsheng.github.io/theme/css/style.css" type="text/css"/>
+
+
+</head>
+<body>
+
+<div class="navbar navbar-default navbar-fixed-top" role="navigation">
+	<div class="container">
+        <div class="navbar-header">
+            <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-ex1-collapse">
+                <span class="sr-only">Toggle navigation</span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+            </button>
+            <a href="http://runsheng.github.io/" class="navbar-brand">
+Buskined bioinformatics            </a>
+        </div>
+        <div class="collapse navbar-collapse navbar-ex1-collapse">
+            <ul class="nav navbar-nav">
+                        <li >
+                            <a href="http://runsheng.github.io/category/aboutme.html">Aboutme</a>
+                        </li>
+                        <li >
+                            <a href="http://runsheng.github.io/category/en.html">En</a>
+                        </li>
+                        <li class="active">
+                            <a href="http://runsheng.github.io/category/zhong-wen.html">中文</a>
+                        </li>
+            </ul>
+            <ul class="nav navbar-nav navbar-right">
+              <li><a href="http://runsheng.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+            </ul>
+        </div>
+        <!-- /.navbar-collapse -->
+    </div>
+</div> <!-- /.navbar -->
+<!-- Banner -->
+<!-- End Banner -->
+<div class="container">
+    <div class="row">
+        <div class="col-sm-9">
+
+    <section id="content">
+        <article>
+            <header class="page-header">
+                <h1>
+                    <a href="http://runsheng.github.io/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html"
+                       rel="bookmark"
+                       title="Permalink to R packages 新书 PDF自行编译 (ubuntu 14.04)">
+                        R packages 新书 PDF自行编译 (ubuntu 14.04)
+                    </a>
+                </h1>
+            </header>
+            <div class="entry-content">
+                <div class="panel">
+                    <div class="panel-body">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-06-29T00:00:00+08:00"> 周一 29 六月 2015</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://runsheng.github.io/tag/r.html">R</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                </div>
+                <h1>R packages 新书 PDF自行编译 (ubuntu 14.04)</h1>
+<p>前段日子Hadley Wickham的新书 'R packages'也算是上线了，美亚有售<a href="http://www.amazon.com/R-Packages-Hadley-Wickham/dp/1491910593">实体版</a>。</p>
+<p>不过本书的所有资源包括原文和代码都可以在<a href="https://github.com/hadley/r-pkgs/">github</a>以及<a href="http://r-pkgs.had.co.nz/">网站</a>上找到，所以其实是开源的。</p>
+<p>网页版本很漂亮读起来也很不错甚至可以本地编译网站(Ruby based)，但是我辈diaosi还是想看pdf。</p>
+<p>Hadley其实写了build-book.r，只要有R和LaTeX就可以生成pdf，步骤简介如下(看了<a href="http://brettklamer.com/diversions/statistical/compile-hadleys-r-packages-to-a-pdf/">Brett Klamer的blog</a>, 一路走下来,果断没成...稍微改了下步骤):</p>
+<h3>1. 下载</h3>
+<div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/hadley/r-pkgs/</span>
+</pre></div>
+
+
+<p>可以看到/book/目录下的build-book.r, 里面需要载入rmarkdown和bookdown两个library.所以下载之.</p>
+<h3>2. devtool安装rmarkdown和bookdown</h3>
+<div class="highlight"><pre><span class="n">install</span><span class="p">.</span><span class="n">packages</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span> <span class="err">#</span> <span class="err">先装</span><span class="n">devtools</span>
+<span class="n">devtools</span><span class="o">::</span><span class="n">install_github</span><span class="p">(</span><span class="s">&quot;hadley/devtools&quot;</span><span class="p">)</span> <span class="err">#</span> <span class="n">devtools</span><span class="err">更新为</span><span class="n">Hadley</span><span class="err">的开发版</span><span class="p">,</span><span class="err">可以不做</span>
+<span class="n">devtools</span><span class="o">::</span><span class="n">install_github</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="s">&quot;rstudio/rmarkdown&quot;</span><span class="p">,</span> <span class="s">&quot;hadley/bookdown&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<p>其中<code>devtools::install_github("hadley/devtools")</code>,在现在的版本(2015/06/29)不执行也行.</p>
+<h3>3. 从CRAN安装所有依赖包</h3>
+<div class="highlight"><pre><span class="n">install</span><span class="p">.</span><span class="n">packages</span><span class="p">(</span><span class="n">c</span><span class="p">(</span><span class="s">&quot;knitr&quot;</span><span class="p">,</span> <span class="s">&quot;pryr&quot;</span><span class="p">,</span> <span class="s">&quot;nycflights13&quot;</span><span class="p">,</span> <span class="s">&quot;png&quot;</span><span class="p">,</span> <span class="s">&quot;stringi&quot;</span><span class="p">,</span> <span class="s">&quot;lubridate&quot;</span><span class="p">,</span> <span class="s">&quot;testthat&quot;</span><span class="p">))</span>
+</pre></div>
+
+
+<p>主要是bookdown的依赖包.</p>
+<h3>4. XeLaTeX以及附加字体库，ubuntu可以apt装.</h3>
+<div class="highlight"><pre>sudo apt-get install texlive-xetex
+sudo apt-get install fonts-inconsolata
+sudo apt-get install texlive-xetex-extra 
+</pre></div>
+
+
+<p>需要包括字体库upquote.sty和emptypage.sty (在texlive-xetex-extra里打包了), 如果想单装,在debian里面还是比较麻烦, 因为tlmgr install在debian里面是不能用的~</p>
+<h3>5. 运行 /book/build-book.r文件</h3>
+<p>直到最后一行返回TRUE才是正确的生成了PDF文件“r-packages.pdf”，文件可以在/book文件夹找到.</p>
+<div class="highlight"><pre><span class="n">file</span><span class="p">.</span><span class="n">copy</span><span class="p">(</span><span class="s">&quot;book/tex/r-packages.pdf&quot;</span><span class="p">,</span> <span class="s">&quot;book/r-packages.pdf&quot;</span><span class="p">,</span> <span class="n">overwrite</span> <span class="o">=</span> <span class="n">TRUE</span><span class="p">)</span>
+<span class="p">[</span><span class="mi">1</span><span class="p">]</span> <span class="n">TRUE</span>
+</pre></div>
+
+
+<p>如果有X和Rstudio，自然是用Rstudio打开r-pkgs.Rproj文件，之后打开/book/build-book.r文件逐行运行.
+比如我第一次运行在46行
+<code>system("xelatex -interaction=batchmode r-packages ")</code>卡住
+只显示</p>
+<div class="highlight"><pre><span class="err">“</span><span class="n">This</span> <span class="n">is</span> <span class="n">XeTeX</span><span class="p">,</span> <span class="n">Version</span> <span class="mf">3.1415926</span><span class="o">-</span><span class="mf">2.5</span><span class="o">-</span><span class="mf">0.9999.3</span> <span class="p">(</span><span class="n">TeX</span> <span class="n">Live</span> <span class="mi">2013</span><span class="o">/</span><span class="n">Debian</span><span class="p">)</span>
+<span class="k">restricted</span> <span class="err">\</span><span class="n">write18</span> <span class="n">enabled</span><span class="p">.</span>
+<span class="n">entering</span> <span class="n">extended</span> <span class="n">mode</span><span class="err">”</span>
+</pre></div>
+
+
+<p>而没有停顿, 这是因为LaTex缺少了字体文件而没有工作, 装了texlive-xetex-extra之后就好了.（注: 这个warning是正常信息，restricted \write18 并不影响最终PDF的生成).</p>
+<p>附上编译的例子: <a href="/attachment/r-packages.pdf">点我</a>.</p>
+<p><em>2015/06/29,由于本书还在频繁更新,要看还是自己弄个吧.</em></p>
+            </div>
+            <!-- /.entry-content -->
+    <hr/>
+    <section class="comments" id="comments">
+        <h2>Comments</h2>
+
+        <div id="disqus_thread"></div>
+        <script type="text/javascript">
+            /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+            var disqus_shortname = 'runshengli'; // required: replace example with your forum shortname
+
+                    var disqus_identifier = 'r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404';
+                var disqus_url = 'http://runsheng.github.io/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html';
+
+            var disqus_config = function () {
+                this.language = "en";
+            };
+
+            /* * * DON'T EDIT BELOW THIS LINE * * */
+            (function () {
+                var dsq = document.createElement('script');
+                dsq.type = 'text/javascript';
+                dsq.async = true;
+                dsq.src = '//' + disqus_shortname + '.disqus.com/embed.js';
+                (document.getElementsByTagName('head')[0] || document.getElementsByTagName('body')[0]).appendChild(dsq);
+            })();
+        </script>
+        <noscript>Please enable JavaScript to view the <a href="http://disqus.com/?ref_noscript">comments powered by
+            Disqus.</a></noscript>
+        <a href="http://disqus.com" class="dsq-brlink">comments powered by <span class="logo-disqus">Disqus</span></a>
+
+    </section>
+        </article>
+    </section>
+
+        </div>
+        <div class="col-sm-3" id="sidebar">
+            <aside>
+
+<section class="well well-sm">
+    <ul class="list-group list-group-flush">
+            <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
+              <ul class="list-group" id="social">
+                <li class="list-group-item"><a href="http://runsheng.github.io"><i class="fa fa-blog-square fa-lg"></i> blog</a></li>
+                <li class="list-group-item"><a href="http://www.weibo.com/u/2176571792"><i class="fa fa-weibo fa-lg"></i> weibo</a></li>
+              </ul>
+            </li>
+
+
+
+            <li class="list-group-item"><a href="http://runsheng.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+                <ul class="list-group " id="tags">
+                </ul>
+            </li>
+    </ul>
+</section>
+            </aside>
+        </div>
+    </div>
+</div>
+<footer>
+   <div class="container">
+      <hr>
+      <div class="row">
+         <div class="col-xs-10">&copy; 2015 Runsheng
+            &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
+            <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
+            <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
+         <div class="col-xs-2"><p class="pull-right"><i class="fa fa-arrow-up"></i> <a href="#">Back to top</a></p></div>
+      </div>
+   </div>
+</footer>
+<script src="http://runsheng.github.io/theme/js/jquery.min.js"></script>
+
+<!-- Include all compiled plugins (below), or include individual files as needed -->
+<script src="http://runsheng.github.io/theme/js/bootstrap.min.js"></script>
+
+<!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
+<script src="http://runsheng.github.io/theme/js/respond.min.js"></script>
+
+    <!-- Disqus -->
+    <script type="text/javascript">
+        /* * * CONFIGURATION VARIABLES: EDIT BEFORE PASTING INTO YOUR WEBPAGE * * */
+        var disqus_shortname = 'runshengli'; // required: replace example with your forum shortname
+
+        /* * * DON'T EDIT BELOW THIS LINE * * */
+        (function () {
+            var s = document.createElement('script');
+            s.async = true;
+            s.type = 'text/javascript';
+            s.src = '//' + disqus_shortname + '.disqus.com/count.js';
+            (document.getElementsByTagName('HEAD')[0] || document.getElementsByTagName('BODY')[0]).appendChild(s);
+        }());
+    </script>
+    <!-- End Disqus Code -->
+
+</body>
+</html>
