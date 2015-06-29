@@ -1,0 +1,59 @@
+<?xml version="1.0" encoding="utf-8"?>
+<feed xmlns="http://www.w3.org/2005/Atom"><title>Buskined bioinformatics</title><link href="runsheng/" rel="alternate"></link><link href="runsheng/feeds/all.atom.xml" rel="self"></link><id>runsheng/</id><updated>2014-06-22T00:00:00+08:00</updated><entry><title>About me</title><link href="runsheng/about-me.html" rel="alternate"></link><updated>2014-06-22T00:00:00+08:00</updated><author><name>runsheng</name></author><id>tag:,2014-06-22:runsheng/about-me.html</id><summary type="html">&lt;h2&gt;Runsheng li&lt;/h2&gt;
+&lt;h3&gt;- Working in HKBU now&lt;/h3&gt;
+&lt;h3&gt;- PhD @ NJAU&lt;/h3&gt;
+&lt;h3&gt;- Bachelor @ NWSUAF&lt;/h3&gt;
+&lt;blockquote&gt;
+&lt;p&gt;望海潮/过长江&lt;/p&gt;
+&lt;p&gt;[2013/11/09于南京]&lt;/p&gt;
+&lt;p&gt;繁花将尽，金曦尚远，中夜过此长江。归路几识，长涛漫卷，人世些许风霜。&lt;/p&gt;
+&lt;p&gt;有皎月清朗，奈何乱灯碍，难照衣裳。&lt;/p&gt;
+&lt;p&gt;觅觅寻寻，信知吴楚菲今乡。&lt;/p&gt;
+&lt;p&gt;何曾止住彷徨！&lt;/p&gt;
+&lt;p&gt;笑浮云即吾，胡乱飞扬。西北东南，三京两镇，参差万里行藏。&lt;/p&gt;
+&lt;p&gt;当不语离殇。&lt;/p&gt;
+&lt;p&gt;但放眼极目，层峦叠嶂。&lt;/p&gt;
+&lt;p&gt;想问何时风起，吹我过高岗。&lt;/p&gt;
+&lt;/blockquote&gt;</summary></entry><entry><title>Start a ipython notebook server with password login</title><link href="runsheng/start-a-ipython-notebook-server-with-password-login.html" rel="alternate"></link><updated>2014-06-18T00:00:00+08:00</updated><author><name>runsheng</name></author><id>tag:,2014-06-18:runsheng/start-a-ipython-notebook-server-with-password-login.html</id><summary type="html">&lt;blockquote&gt;
+&lt;p&gt;As I finally realized that, to install a rpy2 package on Windows is almost a mission impossible,  I decide to install a ipython notebook server on the remote machine instead. So I can generate the R script from python and run by "R cmd run run.r". Naive, but it works...&lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;p&gt;The &lt;a href="http://ipython.org/ipython-doc/1/interactive/public_server.html"&gt;offical website&lt;/a&gt; suggest to use SSL in login, however, I may have to use the server with public computer. So password login should be more convenient.&lt;/p&gt;
+&lt;blockquote&gt;
+&lt;p&gt;Here is the step: &lt;/p&gt;
+&lt;/blockquote&gt;
+&lt;h4&gt;1. First, create a hashed password.&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;1&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="kn"&gt;from&lt;/span&gt; &lt;span class="nn"&gt;IPython.lib&lt;/span&gt; &lt;span class="kn"&gt;import&lt;/span&gt; &lt;span class="n"&gt;passwd&lt;/span&gt;
+&lt;span class="n"&gt;In&lt;/span&gt; &lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;2&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="n"&gt;passwd&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+&lt;span class="n"&gt;Enter&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="n"&gt;Verify&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt;&lt;span class="p"&gt;:&lt;/span&gt;
+&lt;span class="n"&gt;Out&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="mi"&gt;3&lt;/span&gt;&lt;span class="p"&gt;]:&lt;/span&gt; &lt;span class="s"&gt;&amp;#39;sha1:5dd097...&amp;#39;&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;2. Create a custom profile for the notebook, with the following command line, type:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="nv"&gt;$ &lt;/span&gt;ipython profile create nbserver
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;3. Change the Config file(ipython_notebook_config.py), add the following lines,&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;&lt;span class="n"&gt;c&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;get_config&lt;/span&gt;&lt;span class="p"&gt;()&lt;/span&gt;
+
+&lt;span class="cp"&gt;# Kernel config&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;IPKernelApp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pylab&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="kr"&gt;inline&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;  &lt;span class="err"&gt;#&lt;/span&gt; &lt;span class="k"&gt;if&lt;/span&gt; &lt;span class="n"&gt;you&lt;/span&gt; &lt;span class="n"&gt;want&lt;/span&gt; &lt;span class="n"&gt;plotting&lt;/span&gt; &lt;span class="n"&gt;support&lt;/span&gt; &lt;span class="n"&gt;always&lt;/span&gt;
+
+&lt;span class="cp"&gt;# Notebook config&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;certfile&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;absolute&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;path&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;to&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;your&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;certificate&lt;/span&gt;&lt;span class="o"&gt;/&lt;/span&gt;&lt;span class="n"&gt;mycert&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;pem&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;ip&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="sc"&gt;&amp;#39;*&amp;#39;&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;open_browser&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;False&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="n"&gt;u&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="n"&gt;sha1&lt;/span&gt;&lt;span class="o"&gt;:&lt;/span&gt;&lt;span class="mi"&gt;5&lt;/span&gt;&lt;span class="n"&gt;dd097&lt;/span&gt;&lt;span class="p"&gt;...&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;&lt;span class="p"&gt;[&lt;/span&gt;&lt;span class="n"&gt;the&lt;/span&gt; &lt;span class="n"&gt;hashed&lt;/span&gt; &lt;span class="n"&gt;password&lt;/span&gt; &lt;span class="n"&gt;generated&lt;/span&gt; &lt;span class="n"&gt;by&lt;/span&gt;  &lt;span class="n"&gt;IPython&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;lib&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;passwd&lt;/span&gt;&lt;span class="p"&gt;]&lt;/span&gt;&lt;span class="err"&gt;&amp;#39;&lt;/span&gt;
+&lt;span class="cp"&gt;# Define a port&lt;/span&gt;
+&lt;span class="n"&gt;c&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;NotebookApp&lt;/span&gt;&lt;span class="p"&gt;.&lt;/span&gt;&lt;span class="n"&gt;port&lt;/span&gt; &lt;span class="o"&gt;=&lt;/span&gt; &lt;span class="mi"&gt;8888&lt;/span&gt;
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;h4&gt;4. Make it run:&lt;/h4&gt;
+&lt;div class="highlight"&gt;&lt;pre&gt;ipython notebook --profile&lt;span class="o"&gt;=&lt;/span&gt;nbserver
+&lt;/pre&gt;&lt;/div&gt;
+
+
+&lt;p&gt;Then the server can be accessed by using the "http://server_IP:8888" , you will have to enter the password for login.&lt;/p&gt;</summary><category term="python"></category></entry><entry><title>使用pelican搭建基于git的静态博客</title><link href="runsheng/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html" rel="alternate"></link><updated>2014-06-17T00:00:00+08:00</updated><author><name>runsheng</name></author><id>tag:,2014-06-17:runsheng/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html</id><summary type="html">&lt;p&gt;Just the test code for the first pelican upload.&lt;/p&gt;</summary><category term="python"></category></entry></feed>
