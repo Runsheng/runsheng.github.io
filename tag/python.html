@@ -78,6 +78,51 @@ Buskined bioinformatics            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">使用pelican搭建基于git的静态博客</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-06-17T00:00:00+08:00"> 周三 17 六月 2015</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><h4>缘由</h4>
+<blockquote>
+<p>于是最终我还是决定把博客挪到github上, 虽然我还是要用win, endnote重度依赖是一方面.处理"excel达人"遗留的神奇宏绘图是另一方面.</p>
+</blockquote>
+<h4>最小环境配置</h4>
+<p>-. git
+-. python环境,我是python2.7.10
+-. pip一定要配好,用不用virtualenv全看个人喜好
+-. <a href="http://www.equation.com/servlet/equation.cmd?fa=make">GNU make</a>, 稍微有点麻烦,装好了还得记得加环境变量.
+-. 写markdown的编辑器得有个,我现在拿sublime写,开着vim model(就是大家说的真-神经病模式). 但是说实话win下gvim太难用了. 没有的话说实话notepad也一样.</p>
+<h4>装装装</h4>
+<div class="highlight"><pre><span class="n">pip</span> <span class="n">install</span> <span class="n">pelican</span>
+<span class="n">pip</span> <span class="n">install</span> <span class="n">markdown</span>
+</pre></div>
+
+
+<p>建个文件夹比如d:/blog之类的,进去,开cmd</p>
+<div class="highlight"><pre><span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span>
+</pre></div>
+
+
+<p>一路回车下来, 这些问题其实是pelicanconf.py的一些参数, 可以之后再改.</p>
+<h4>建一个测试页面试下</h4>
+<p>在<code>content</code>目录里面随便写个 test.md, 其中Title ...</p>
+                    <a class="btn btn-default btn-xs" href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/start-a-ipython-notebook-server-with-password-login.html">Start a ipython notebook server with password login</a></h2>
                     <div class="well well-sm">
 <footer class="post-info">
@@ -97,28 +142,6 @@ Buskined bioinformatics            </a>
                 <div class="summary"><blockquote>
 <p>As I finally realized that, to install a rpy2 package on Windows is almost a mission impossible,  I decide to install a ipython notebook server on the remote machine instead. So I can generate the R script from python and run by "R cmd run run.r". Naive, but it ...</p></blockquote>
                     <a class="btn btn-default btn-xs" href="/start-a-ipython-notebook-server-with-password-login.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">使用pelican搭建基于git的静态博客</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2014-06-17T00:00:00+08:00"> 周二 17 六月 2014</time>
-    </span>
-
-
-
-
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/python.html">python</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Just the test code for the first pelican upload.</p>
-                    <a class="btn btn-default btn-xs" href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -154,13 +177,13 @@ Buskined bioinformatics            </a>
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="/tag/bioinformatics.html">
-                            bioinformatics
+                        <a href="/tag/r.html">
+                            R
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
-                        <a href="/tag/r.html">
-                            R
+                        <a href="/tag/bioinformatics.html">
+                            bioinformatics
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
@@ -182,7 +205,7 @@ Buskined bioinformatics            </a>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2014 Runsheng
+         <div class="col-xs-10">&copy; 2015 Runsheng
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
