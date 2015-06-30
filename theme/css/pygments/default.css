@@ -1,6 +1,7 @@
 .highlight pre .hll { background-color: #ffffcc }
 .highlight pre  { background: #f8f8f8; }
 .highlight pre .c { color: #408080; font-style: italic } /* Comment */
+.highlight pre .err { border: 1px solid #FF0000 } /* Error */
 .highlight pre .k { color: #008000; font-weight: bold } /* Keyword */
 .highlight pre .o { color: #666666 } /* Operator */
 .highlight pre .cm { color: #408080; font-style: italic } /* Comment.Multiline */
@@ -9,6 +10,7 @@
 .highlight pre .cs { color: #408080; font-style: italic } /* Comment.Special */
 .highlight pre .gd { color: #A00000 } /* Generic.Deleted */
 .highlight pre .ge { font-style: italic } /* Generic.Emph */
+.highlight pre .gr { color: #FF0000 } /* Generic.Error */
 .highlight pre .gh { color: #000080; font-weight: bold } /* Generic.Heading */
 .highlight pre .gi { color: #00A000 } /* Generic.Inserted */
 .highlight pre .go { color: #888888 } /* Generic.Output */
