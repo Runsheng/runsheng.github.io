@@ -1,7 +1,7 @@
 <!DOCTYPE html>
 <html lang="en" prefix="og: http://ogp.me/ns# fb: https://www.facebook.com/2008/fbml">
 <head>
-    <title>Categories - Buskined bioinformatics</title>
+    <title>RNA-seq - Buskined bioinformatics</title>
     <!-- Using the latest rendering mode for IE -->
     <meta http-equiv="X-UA-Compatible" content="IE=edge">
     <meta charset="utf-8">
@@ -10,7 +10,8 @@
 
 
 
-        <meta name="author" content="Runsheng" />
+    <meta name="author" content="Runsheng" />
+    <meta name="keywords" content="RNA-seq" />
 
     <!-- Open Graph tags -->
         <meta property="og:site_name" content="Buskined bioinformatics" />
@@ -76,50 +77,44 @@ Buskined bioinformatics            </a>
 <div class="container">
     <div class="row">
         <div class="col-sm-9">
-    <section id="categories">
-        <h1>All Categories for Buskined bioinformatics</h1>
-        <div class="panel-group" id="accordion">
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-aboutme">aboutme <span class="badge pull-right">1</span></a>
-                    </h4>
-                </div>
-                <div id="collapse-aboutme" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2014-01-15T00:00:00+08:00">周三 15 一月 2014</time></span> <a href="/about-me.html">About me</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-en">en <span class="badge pull-right">2</span></a>
-                    </h4>
-                </div>
-                <div id="collapse-en" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2015-05-17T00:00:00+08:00">周日 17 五月 2015</time></span> <a href="/quick-guide-for-parameters-in-tophat-cufflinks-in-nematode-rna-seq-analysis.html">Quick guide for parameters in tophat-cufflinks in nematode RNA-seq analysis</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2014-06-18T00:00:00+08:00">周三 18 六月 2014</time></span> <a href="/start-a-ipython-notebook-server-with-password-login.html">Start a ipython notebook server with password login</a></p>
-                    </div>
-                </div>
-            </div>
-            <div class="panel panel-default">
-                <div class="panel-heading">
-                    <h4 class="panel-title">
-                        <a data-toggle="collapse" data-parent="#accordion" href="#collapse-zhong-wen">中文 <span class="badge pull-right">2</span></a>
-                    </h4>
-                </div>
-                <div id="collapse-zhong-wen" class="panel-collapse collapse">
-                    <div class="panel-body">
-                        <p><span class="categories-timestamp"><time datetime="2015-06-29T00:00:00+08:00">周一 29 六月 2015</time></span> <a href="/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html">R packages 新书 PDF自行编译 (ubuntu 14.04)</a></p>
-                        <p><span class="categories-timestamp"><time datetime="2014-06-17T00:00:00+08:00">周二 17 六月 2014</time></span> <a href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">使用pelican搭建基于git的静态博客</a></p>
-                    </div>
-                </div>
-            </div>
-        </div>
+            <article>
+                <h2><a href="/quick-guide-for-parameters-in-tophat-cufflinks-in-nematode-rna-seq-analysis.html">Quick guide for parameters in tophat-cufflinks in nematode RNA-seq analysis</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-05-17T00:00:00+08:00"> 周日 17 五月 2015</time>
+    </span>
 
-    </section>
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/bioinformatics.html">bioinformatics</a>
+        /
+	<a href="/tag/rna-seq.html">RNA-seq</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>The summary of tophat-cufflinks protocol is like that: </p>
+<h3>step1: generate a tophat_out folder with bam files</h3>
+<div class="highlight"><pre>tophat  -G genes.gtf &lt;index&gt;  sample1_1.fq  sample1_2.fq    
+tophat  -G genes.gtf &lt;index&gt;  sample2_1.fq  sample2_2.fq
+</pre></div>
+
+
+<h3>step2: generate new .gtf files (assemble isoform)</h3>
+<div class="highlight"><pre>cufflinks sample1/accepted_hits.bam     
+cufflinks sample2/accepted_hits.bam
+</pre></div>
+
+
+<h3>step3 ...</h3>
+                    <a class="btn btn-default btn-xs" href="/quick-guide-for-parameters-in-tophat-cufflinks-in-nematode-rna-seq-analysis.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
