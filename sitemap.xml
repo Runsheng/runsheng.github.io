@@ -5,21 +5,28 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/</loc>
-<lastmod>2015-06-30T13:12:39-00:00</lastmod>
+<lastmod>2015-06-30T16:22:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/archives.html</loc>
-<lastmod>2015-06-30T13:12:39-00:00</lastmod>
+<lastmod>2015-06-30T16:22:25-00:00</lastmod>
+<changefreq>daily</changefreq>
+<priority>0.5</priority>
+</url>
+
+<url>
+<loc>/tags.html</loc>
+<lastmod>2015-06-30T16:22:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
 
 <url>
 <loc>/categories.html</loc>
-<lastmod>2015-06-30T13:12:39-00:00</lastmod>
+<lastmod>2015-06-30T16:22:25-00:00</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -27,6 +34,13 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 <url>
 <loc>/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html</loc>
 <lastmod>2015-06-29T00:00:00+08:00</lastmod>
+<changefreq>monthly</changefreq>
+<priority>0.7</priority>
+</url>
+
+<url>
+<loc>/quick-guide-for-parameters-in-tophat-cufflinks-in-nematode-rna-seq-analysis.html</loc>
+<lastmod>2015-05-17T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
 </url>
@@ -40,13 +54,6 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html</loc>
-<lastmod>2014-06-17T00:00:00+08:00</lastmod>
-<changefreq>monthly</changefreq>
-<priority>0.7</priority>
-</url>
-
-<url>
-<loc>/shi-yong-tophat-cufflinkjin-xing-rna-seqfen-xi-de.html</loc>
 <lastmod>2014-06-17T00:00:00+08:00</lastmod>
 <changefreq>monthly</changefreq>
 <priority>0.7</priority>
@@ -68,7 +75,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/category/en.html</loc>
-<lastmod>2014-06-18T00:00:00+08:06</lastmod>
+<lastmod>2015-05-17T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>
@@ -82,7 +89,7 @@ xmlns="http://www.sitemaps.org/schemas/sitemap/0.9">
 
 <url>
 <loc>/tag/python.html</loc>
-<lastmod>2014-06-18T00:00:00+08:06</lastmod>
+<lastmod>2015-05-17T00:00:00+08:06</lastmod>
 <changefreq>daily</changefreq>
 <priority>0.5</priority>
 </url>

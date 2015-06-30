@@ -78,6 +78,41 @@ Buskined bioinformatics            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="/quick-guide-for-parameters-in-tophat-cufflinks-in-nematode-rna-seq-analysis.html">Quick guide for parameters in tophat-cufflinks in nematode RNA-seq analysis</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-05-17T00:00:00+08:00"> 周日 17 五月 2015</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><p>The summary of tophat-cufflinks protocol is like that: </p>
+<h3>step1: generate a tophat_out folder with bam files</h3>
+<div class="highlight"><pre>tophat  -G genes.gtf &lt;index&gt;  sample1_1.fq  sample1_2.fq    
+tophat  -G genes.gtf &lt;index&gt;  sample2_1.fq  sample2_2.fq
+</pre></div>
+
+
+<h3>step2: generate new .gtf files (assemble isoform)</h3>
+<div class="highlight"><pre>cufflinks sample1/accepted_hits.bam     
+cufflinks sample2/accepted_hits.bam
+</pre></div>
+
+
+<h3>step3 ...</h3>
+                    <a class="btn btn-default btn-xs" href="/quick-guide-for-parameters-in-tophat-cufflinks-in-nematode-rna-seq-analysis.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="/start-a-ipython-notebook-server-with-password-login.html">Start a ipython notebook server with password login</a></h2>
                     <div class="well well-sm">
 <footer class="post-info">
@@ -119,29 +154,6 @@ Buskined bioinformatics            </a>
 </footer><!-- /.post-info -->                    </div>
                 <div class="summary"><p>Just the test code for the first pelican upload.</p>
                     <a class="btn btn-default btn-xs" href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">more ...</a>
-                </div>
-            </article>
-            <hr/>
-            <article>
-                <h2><a href="/shi-yong-tophat-cufflinkjin-xing-rna-seqfen-xi-de.html">使用Tophat--cufflink进行RNA-seq分析的</a></h2>
-                    <div class="well well-sm">
-<footer class="post-info">
-    <span class="label label-default">Date</span>
-    <span class="published">
-        <i class="fa fa-calendar"></i><time datetime="2014-06-17T00:00:00+08:00"> 周二 17 六月 2014</time>
-    </span>
-
-
-
-
-
-<span class="label label-default">Tags</span>
-	<a href="/tag/python.html">python</a>
-    
-</footer><!-- /.post-info -->                    </div>
-                <div class="summary"><p>Very basic Bioinformatic for Linux beginners</p>
-<p>RNA-seq</p>
-                    <a class="btn btn-default btn-xs" href="/shi-yong-tophat-cufflinkjin-xing-rna-seqfen-xi-de.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -195,7 +207,7 @@ Buskined bioinformatics            </a>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2014 Runsheng
+         <div class="col-xs-10">&copy; 2015 Runsheng
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>
