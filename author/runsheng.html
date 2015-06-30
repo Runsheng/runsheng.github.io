@@ -17,16 +17,17 @@
         <meta property="og:site_name" content="Buskined bioinformatics" />
         <meta property="og:type" content="website"/>
         <meta property="og:title" content="Buskined bioinformatics"/>
-        <meta property="og:url" content="http://runsheng.github.io"/>
+        <meta property="og:url" content=""/>
         <meta property="og:description" content="Buskined bioinformatics"/>
 
 
     <!-- Bootstrap -->
-        <link rel="stylesheet" href="http://runsheng.github.io/theme/css/bootstrap.min.css" type="text/css"/>
-    <link href="http://runsheng.github.io/theme/css/font-awesome.min.css" rel="stylesheet">
+        <link rel="stylesheet" href="/theme/css/bootstrap.min.css" type="text/css"/>
+    <link href="/theme/css/font-awesome.min.css" rel="stylesheet">
 
-    <link href="http://runsheng.github.io/theme/css/pygments/custom.css" rel="stylesheet">
-    <link rel="stylesheet" href="http://runsheng.github.io/theme/css/style.css" type="text/css"/>
+    <link href="/theme/css/pygments/custom.css" rel="stylesheet">
+    <link href="/theme/tipuesearch/tipuesearch.css" rel="stylesheet">
+    <link rel="stylesheet" href="/theme/css/style.css" type="text/css"/>
 
 
 </head>
@@ -41,23 +42,28 @@
                 <span class="icon-bar"></span>
                 <span class="icon-bar"></span>
             </button>
-            <a href="http://runsheng.github.io/" class="navbar-brand">
+            <a href="/" class="navbar-brand">
 Buskined bioinformatics            </a>
         </div>
         <div class="collapse navbar-collapse navbar-ex1-collapse">
             <ul class="nav navbar-nav">
                         <li >
-                            <a href="http://runsheng.github.io/category/aboutme.html">Aboutme</a>
+                            <a href="/category/aboutme.html">Aboutme</a>
                         </li>
                         <li >
-                            <a href="http://runsheng.github.io/category/en.html">En</a>
+                            <a href="/category/en.html">En</a>
                         </li>
                         <li >
-                            <a href="http://runsheng.github.io/category/zhong-wen.html">中文</a>
+                            <a href="/category/zhong-wen.html">中文</a>
                         </li>
             </ul>
             <ul class="nav navbar-nav navbar-right">
-              <li><a href="http://runsheng.github.io/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
+              <li><span>
+                <form class="navbar-search" action="/search">
+                  <input type="text" class="search-query" placeholder="Search" name="q" id="tipue_search_input" required>
+                </form></span>
+              </li>
+              <li><a href="/archives.html"><i class="fa fa-th-list"></i><span class="icon-label">Archives</span></a></li>
             </ul>
         </div>
         <!-- /.navbar-collapse -->
@@ -70,7 +76,20 @@ Buskined bioinformatics            </a>
         <div class="col-sm-9">
 
             <article>
-                <h2><a href="http://runsheng.github.io/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html">R packages 新书 PDF自行编译 (ubuntu 14.04)</a></h2>
+                <h2><a href="/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html">R packages 新书 PDF自行编译 (ubuntu 14.04)</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2015-06-29T00:00:00+08:00"> 周一 29 六月 2015</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/r.html">R</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 <div class="summary"><h1>R packages 新书 PDF自行编译 (ubuntu 14.04)</h1>
 <p>前段日子Hadley Wickham的新书 'R packages'也算是上线了，美亚有售<a href="http://www.amazon.com/R-Packages-Hadley-Wickham/dp/1491910593">实体版</a>。</p>
 <p>不过本书的所有资源包括原文和代码都可以在<a href="https://github.com/hadley/r-pkgs/">github</a>以及<a href="http://r-pkgs.had.co.nz/">网站</a>上找到，所以其实是开源的。</p>
@@ -83,35 +102,85 @@ Buskined bioinformatics            </a>
 
 <p>可以看到/book/目录下的build-book.r, 里面需要载入rmarkdown和bookdown两个library.所以下载之.</p>
 <h3>2 ...</h3>
-                    <a class="btn btn-default btn-xs" href="http://runsheng.github.io/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="http://runsheng.github.io/start-a-ipython-notebook-server-with-password-login.html">Start a ipython notebook server with password login</a></h2>
+                <h2><a href="/start-a-ipython-notebook-server-with-password-login.html">Start a ipython notebook server with password login</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-06-18T00:00:00+08:00"> 周三 18 六月 2014</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 <div class="summary"><blockquote>
 <p>As I finally realized that, to install a rpy2 package on Windows is almost a mission impossible,  I decide to install a ipython notebook server on the remote machine instead. So I can generate the R script from python and run by "R cmd run run.r". Naive, but it ...</p></blockquote>
-                    <a class="btn btn-default btn-xs" href="http://runsheng.github.io/start-a-ipython-notebook-server-with-password-login.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="/start-a-ipython-notebook-server-with-password-login.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="http://runsheng.github.io/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">使用pelican搭建基于git的静态博客</a></h2>
+                <h2><a href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">使用pelican搭建基于git的静态博客</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-06-17T00:00:00+08:00"> 周二 17 六月 2014</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 <div class="summary"><p>Just the test code for the first pelican upload.</p>
-                    <a class="btn btn-default btn-xs" href="http://runsheng.github.io/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="http://runsheng.github.io/shi-yong-tophat-cufflinkjin-xing-rna-seqfen-xi-de.html">使用Tophat--cufflink进行RNA-seq分析的</a></h2>
+                <h2><a href="/shi-yong-tophat-cufflinkjin-xing-rna-seqfen-xi-de.html">使用Tophat--cufflink进行RNA-seq分析的</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-06-17T00:00:00+08:00"> 周二 17 六月 2014</time>
+    </span>
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
                 <div class="summary"><p>Very basic Bioinformatic for Linux beginners</p>
 <p>RNA-seq</p>
-                    <a class="btn btn-default btn-xs" href="http://runsheng.github.io/shi-yong-tophat-cufflinkjin-xing-rna-seqfen-xi-de.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="/shi-yong-tophat-cufflinkjin-xing-rna-seqfen-xi-de.html">more ...</a>
                 </div>
             </article>
             <hr/>
             <article>
-                <h2><a href="http://runsheng.github.io/about-me.html">About me</a></h2>
+                <h2><a href="/about-me.html">About me</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2014-01-15T00:00:00+08:00"> 周三 15 一月 2014</time>
+    </span>
+
+
+
+    
+</footer><!-- /.post-info -->                    </div>
                 <div class="summary"><h2>Runsheng li</h2>
 <ul>
 <li>Current; postdoc @ HKBU</li>
@@ -142,7 +211,7 @@ Buskined bioinformatics            </a>
 
 <span class="err">想问何时风起，吹我过高岗。</span>
 </pre></div>
-                    <a class="btn btn-default btn-xs" href="http://runsheng.github.io/about-me.html">more ...</a>
+                    <a class="btn btn-default btn-xs" href="/about-me.html">more ...</a>
                 </div>
             </article>
             <hr/>
@@ -150,7 +219,15 @@ Buskined bioinformatics            </a>
         </div>
         <div class="col-sm-3" id="sidebar">
             <aside>
-
+<div id="aboutme">
+        <p>
+            <img width="100%" class="img-thumbnail" src="banner.jpg"/>
+        </p>
+    <p>
+        <strong>About Runsheng</strong><br/>
+        A bio-transformed-informatican who is now working at HKBU.
+    </p>
+</div>
 <section class="well well-sm">
     <ul class="list-group list-group-flush">
             <li class="list-group-item"><h4><i class="fa fa-home fa-lg"></i><span class="icon-label">Social</span></h4>
@@ -162,8 +239,18 @@ Buskined bioinformatics            </a>
 
 
 
-            <li class="list-group-item"><a href="http://runsheng.github.io/"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
+            <li class="list-group-item"><a href="/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
+                    <li class="list-group-item tag-1">
+                        <a href="/tag/python.html">
+                            python
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="/tag/r.html">
+                            R
+                        </a>
+                    </li>
                 </ul>
             </li>
     </ul>
@@ -184,13 +271,13 @@ Buskined bioinformatics            </a>
       </div>
    </div>
 </footer>
-<script src="http://runsheng.github.io/theme/js/jquery.min.js"></script>
+<script src="/theme/js/jquery.min.js"></script>
 
 <!-- Include all compiled plugins (below), or include individual files as needed -->
-<script src="http://runsheng.github.io/theme/js/bootstrap.min.js"></script>
+<script src="/theme/js/bootstrap.min.js"></script>
 
 <!-- Enable responsive features in IE8 with Respond.js (https://github.com/scottjehl/Respond) -->
-<script src="http://runsheng.github.io/theme/js/respond.min.js"></script>
+<script src="/theme/js/respond.min.js"></script>
 
     <!-- Disqus -->
     <script type="text/javascript">
