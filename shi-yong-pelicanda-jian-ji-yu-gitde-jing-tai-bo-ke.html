@@ -183,7 +183,6 @@ Buskined bioinformatics            </a>
 
 <p>虽然大部分插件都是全主题可用的,但是也存在好用与否的问题, 有些插件在原生主题上就需要你自己改base.css才能用,所以尽量配套选,避免麻烦.</p>
 <p><strong>  最终状态  </strong> </p>
-<p>需要注意的是PATHS参数现在同意接受list而不是string作为参数了,当然<code>PLUGIN_PATHS = 'D:/blog/pelican-plugins'</code>也能用, 但是会出warning.</p>
 <div class="highlight"><pre><span class="n">PLUGIN_PATHS</span> <span class="o">=</span> <span class="p">[</span><span class="err">&#39;</span><span class="n">D</span><span class="o">:/</span><span class="n">blog</span><span class="o">/</span><span class="n">pelican</span><span class="o">-</span><span class="n">plugins</span><span class="err">&#39;</span><span class="p">]</span>
 <span class="n">PLUGINS</span> <span class="o">=</span> <span class="p">[</span><span class="err">&#39;</span><span class="n">summary</span><span class="sc">&#39;,&#39;</span><span class="n">sitemap</span><span class="sc">&#39;,&#39;</span><span class="n">neighbors</span><span class="sc">&#39;,&#39;</span><span class="n">tipue_search</span><span class="sc">&#39;,&#39;</span><span class="n">tag_cloud</span><span class="err">&#39;</span><span class="p">]</span>
 <span class="n">DIRECT_TEMPLATES</span> <span class="o">=</span> <span class="p">(</span><span class="err">&#39;</span><span class="n">index</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">categories</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">authors</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">archives</span><span class="err">&#39;</span><span class="p">,</span> <span class="err">&#39;</span><span class="n">search</span><span class="err">&#39;</span><span class="p">)</span>
@@ -191,29 +190,29 @@ Buskined bioinformatics            </a>
 
 
 <p><strong> tipue_search </strong> </p>
-<p>在<code>PLUGINS</code>中加入<code>'tipue_search'</code>,在<code>DIRECT_TEMPLATES</code>加入<code>'search'</code>.</p>
+<p>在<code>PLUGINS</code>中加入<code>'tipue_search'</code>,在<code>DIRECT_TEMPLATES</code>加入<code>'search'</code>, 见上面最终状态。</p>
 <p><strong> tag_cloud </strong> </p>
 <p>老实说,这个是不得不用,如果不打开,那么<code>tag</code>显示永远为空.
-在<code>PLUGINS</code>中加入<code>'tag_cloud'</code>,</p>
-<div class="highlight"><pre><span class="n">DISPLAY_TAGS_ON_SIDEBAR</span> <span class="o">=</span> <span class="n">True</span>
+在<code>PLUGINS</code>中加入<code>'tag_cloud'</code>,config文件中写入</p>
+<div class="highlight"><pre><span class="n">DISPLAY_TAGS_ON_SIDEBAR</span> <span class="o">=</span> <span class="bp">True</span>
 <span class="n">TAGS_URL</span> <span class="o">=</span> <span class="s">&quot;tags.html&quot;</span>
-<span class="n">tag_cloud</span> <span class="o">=</span> <span class="n">True</span>
+<span class="n">tag_cloud</span> <span class="o">=</span> <span class="bp">True</span>
 </pre></div>
 
 
 <p><strong> sitemap </strong> </p>
 <p>在<code>PLUGINS</code>中加入<code>'sitemap'</code>,这样每次make html之后会生成site.xml文件供搜索.</p>
 <div class="highlight"><pre><span class="n">SITEMAP</span> <span class="o">=</span> <span class="p">{</span>
-    <span class="err">&#39;</span><span class="n">format</span><span class="err">&#39;</span><span class="o">:</span> <span class="err">&#39;</span><span class="n">xml</span><span class="err">&#39;</span><span class="p">,</span>
-    <span class="err">&#39;</span><span class="n">priorities</span><span class="err">&#39;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="err">&#39;</span><span class="n">articles</span><span class="err">&#39;</span><span class="o">:</span> <span class="mf">0.7</span><span class="p">,</span>
-        <span class="err">&#39;</span><span class="n">indexes</span><span class="err">&#39;</span><span class="o">:</span> <span class="mf">0.5</span><span class="p">,</span>
-        <span class="err">&#39;</span><span class="n">pages</span><span class="err">&#39;</span><span class="o">:</span> <span class="mf">0.5</span>
+    <span class="s">&#39;format&#39;</span><span class="p">:</span> <span class="s">&#39;xml&#39;</span><span class="p">,</span>
+    <span class="s">&#39;priorities&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;articles&#39;</span><span class="p">:</span> <span class="mf">0.7</span><span class="p">,</span>
+        <span class="s">&#39;indexes&#39;</span><span class="p">:</span> <span class="mf">0.5</span><span class="p">,</span>
+        <span class="s">&#39;pages&#39;</span><span class="p">:</span> <span class="mf">0.5</span>
     <span class="p">},</span>
-    <span class="err">&#39;</span><span class="n">changefreqs</span><span class="err">&#39;</span><span class="o">:</span> <span class="p">{</span>
-        <span class="err">&#39;</span><span class="n">articles</span><span class="err">&#39;</span><span class="o">:</span> <span class="err">&#39;</span><span class="n">monthly</span><span class="err">&#39;</span><span class="p">,</span>
-        <span class="err">&#39;</span><span class="n">indexes</span><span class="err">&#39;</span><span class="o">:</span> <span class="err">&#39;</span><span class="n">daily</span><span class="err">&#39;</span><span class="p">,</span>
-        <span class="err">&#39;</span><span class="n">pages</span><span class="err">&#39;</span><span class="o">:</span> <span class="err">&#39;</span><span class="n">monthly</span><span class="err">&#39;</span>
+    <span class="s">&#39;changefreqs&#39;</span><span class="p">:</span> <span class="p">{</span>
+        <span class="s">&#39;articles&#39;</span><span class="p">:</span> <span class="s">&#39;monthly&#39;</span><span class="p">,</span>
+        <span class="s">&#39;indexes&#39;</span><span class="p">:</span> <span class="s">&#39;daily&#39;</span><span class="p">,</span>
+        <span class="s">&#39;pages&#39;</span><span class="p">:</span> <span class="s">&#39;monthly&#39;</span>
     <span class="p">}</span>
 <span class="p">}</span>
 </pre></div>
@@ -231,7 +230,7 @@ Buskined bioinformatics            </a>
 </pre></div>
 
 
-<p>google站长工具还是很好用的. </p>
+<p>google站长工具还是很好用的。</p>
 <h3>预览没问题就可推到git上去了(以github为例)</h3>
 <h4>github建一个repo, 名字为runsheng.github.io</h4>
 <p>这个名字必须是<code>用户名.github.io</code>或者<code>用户名.github.com</code>的形式</p>
@@ -240,13 +239,30 @@ Buskined bioinformatics            </a>
 <div class="highlight"><pre><span class="n">git</span> <span class="n">init</span>
 <span class="n">git</span> <span class="n">add</span> <span class="p">.</span>
 <span class="n">git</span> <span class="n">remote</span> <span class="n">add</span> <span class="n">origin</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/runsheng/runsheng.github.io</span>
-<span class="n">git</span> <span class="n">pull</span>
+<span class="n">git</span> <span class="n">pull</span> <span class="n">origin</span> <span class="n">master</span>
 <span class="n">git</span> <span class="n">commit</span> <span class="s">&quot;add html&quot;</span>
 <span class="n">git</span> <span class="n">push</span> <span class="n">origin</span> <span class="n">master</span>
 </pre></div>
 
 
 <p>之后就可以访问 <a href="http://runsheng.github.io">runsheng.github.io</a>了. </p>
+<h3>填坑实录,<code>pelicanconf.py</code>参数重设 （2015/07/07更新）</h3>
+<h4>1. 需要注意的是PATHS参数现在同意接受list而不是string作为参数了,当然<code>PLUGIN_PATHS = 'D:/blog/pelican-plugins'</code>也能用, 但是会出warning.</h4>
+<h4>2. pelican-bootstrap3这个主题，在使用tipue_search插件搜索的时候, 搜索到的结果会返回 undefined.</h4>
+<p>不过这个分支<a href="https://github.com/phips/pelican-bootstrap3/tree/bump_tipue_to_v5/">https://github.com/phips/pelican-bootstrap3/tree/bump_tipue_to_v5/</a>可以解决这个问题, 看到已经提交了pull request.</p>
+<p>把改动的几个css和js放到 pelican-bootstrap3/static/tipuesearch下面替换现有文件即可.</p>
+<h4>3. DISQUS_SITENAME的评论有些网页能加载，有些不能，会返回“We are unable to load Disqus...”</h4>
+<p>本人实在JS debug无力。根据官方文档的说法，很可能是因为disqus_url由相对路径生成，但是生成的其实不对。针对这个倒是可以改下参数：</p>
+<div class="highlight"><pre><span class="n">SITEURL</span> <span class="o">=</span> <span class="s">&#39;http://runsheng.github.io&#39;</span>
+<span class="n">RELATIVE_URLS</span> <span class="o">=</span> <span class="bp">False</span>
+</pre></div>
+
+
+<p>似乎问题是解决了，不过这样就没办法在本地预览评论了，需要推上git之后才能看到。</p>
+<h4>4. pelican-bootstrap3这个主题必须使用tag_cloud插件，否则tag不能正常显示</h4>
+<h4>5. 未解决，百度收录问题。</h4>
+<p>google站长工具很好用，提交url很方便。
+相应的百度就是不友好的典型了。首先百度爬虫（他们自己叫蜘蛛）是被github限制了访问的，抓不到网站是正常。手动提交网址链接之后依旧全无反应，搁置了。</p>
             </div>
             <!-- /.entry-content -->
     <hr/>
@@ -308,23 +324,23 @@ Buskined bioinformatics            </a>
             <li class="list-group-item"><a href="http://runsheng.github.io/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://runsheng.github.io/tag/python.html">
-                            python
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
                         <a href="http://runsheng.github.io/tag/bioinformatics.html">
                             bioinformatics
                         </a>
                     </li>
-                    <li class="list-group-item tag-4">
-                        <a href="http://runsheng.github.io/tag/r.html">
-                            R
+                    <li class="list-group-item tag-1">
+                        <a href="http://runsheng.github.io/tag/python.html">
+                            python
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
                         <a href="http://runsheng.github.io/tag/rna-seq.html">
                             RNA-seq
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-4">
+                        <a href="http://runsheng.github.io/tag/r.html">
+                            R
                         </a>
                     </li>
                 </ul>
