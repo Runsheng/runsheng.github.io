@@ -78,6 +78,34 @@ Buskined bioinformatics            </a>
     <div class="row">
         <div class="col-sm-9">
             <article>
+                <h2><a href="http://runsheng.github.io/winxia-tian-keng-shi-lu.html">Win下填坑实录</a></h2>
+                    <div class="well well-sm">
+<footer class="post-info">
+    <span class="label label-default">Date</span>
+    <span class="published">
+        <i class="fa fa-calendar"></i><time datetime="2016-04-27T00:00:00+08:00"> 周三 27 四月 2016</time>
+    </span>
+
+
+
+
+
+<span class="label label-default">Tags</span>
+	<a href="http://runsheng.github.io/tag/python.html">python</a>
+    
+</footer><!-- /.post-info -->                    </div>
+                <div class="summary"><h4>虽然大部分工作都挪到了*nix下面，但是偶尔还是在win下动动手，于是问题就来了。下面是填坑实录:</h4>
+<blockquote>
+<p>回车键</p>
+</blockquote>
+<p>众所周知，win的换行用的是回车加换行<code>\r\n</code>，而不是单纯的换行符<code>\n</code>，所以一般从win下复制到linux的文件，一般会先消灭下<code>\r</code>， 比如<code>sed -i 's/\r//g ' *</code>之类。
+替换完了换成vi看一眼，有没有<code>^M</code>之类的刺眼字符，没有就OK。有的话vi下面还是<code>:%s/\r//g</code>， 全局替换下就好。</p>
+<p>然而惨痛的就是<code>I thought I have finished that but...</code>。这个<code>\r</code>还是曾经出现在我的gff、fasta等等文件中。 而且最悲催的是对于这个东西，使用<code>less</code>， <code>head</code>, <code>tail</code>之类在CLI里面是完全显示不出来的 ...</p>
+                    <a class="btn btn-default btn-xs" href="http://runsheng.github.io/winxia-tian-keng-shi-lu.html">more ...</a>
+                </div>
+            </article>
+            <hr/>
+            <article>
                 <h2><a href="http://runsheng.github.io/guan-yu-quan-zhan-ngsyuan-gong-de-tao-lun-he-si-kao.html">关于"全栈NGS"员工的讨论和思考</a></h2>
                     <div class="well well-sm">
 <footer class="post-info">
@@ -139,14 +167,14 @@ Buskined bioinformatics            </a>
 <p>网页版本很漂亮读起来也很不错甚至可以本地编译网站(Ruby based)，但是我辈diaosi还是想看pdf。</p>
 <p>Hadley其实写了build-book.r，只要有R和LaTeX就可以生成pdf，步骤简介如下(看了<a href="http://brettklamer.com/diversions/statistical/compile-hadleys-r-packages-to-a-pdf/">Brett Klamer的blog</a>, 一路走下来,果断没成...稍微改了下步骤):</p>
 <h3>1. 下载</h3>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/hadley/r-pkgs/</span>
+<div class="highlight"><pre>git clone https://github.com/hadley/r-pkgs/
 </pre></div>
 
 
 <p>可以看到/book/目录下的build-book.r, 里面需要载入rmarkdown和bookdown两个library.所以下载之.</p>
 <h3>2. devtool安装rmarkdown和bookdown</h3>
-<div class="highlight"><pre><span class="n">install</span><span class="p">.</span><span class="n">packages</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span> <span class="err">#</span> <span class="err">先装</span><span class="n">devtools</span>
-<span class="n">devtools ...</span></pre></div>
+<div class="highlight"><pre>install.packages<span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span> <span class="c1"># 先装devtools</span>
+devtools<span class="o">::</span>install_github ...</pre></div>
                     <a class="btn btn-default btn-xs" href="http://runsheng.github.io/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html">more ...</a>
                 </div>
             </article>
@@ -188,11 +216,11 @@ Buskined bioinformatics            </a>
 
 
 <p>建个文件夹比如d:/blog之类的,进去,开cmd</p>
-<div class="highlight"><pre><span class="n">pelican</span><span class="o">-</span><span class="n">quickstart</span>
+<div class="highlight"><pre>pelican-quickstart
 </pre></div>
 
 
-<p>一路回车下来, 这些问题其实是回答pelicanconf ...</p>
+<p>一路回车下来, 这些问题其实是回答pelicanconf.py的一些参数 ...</p>
                     <a class="btn btn-default btn-xs" href="http://runsheng.github.io/shi-yong-pelicanda-jian-ji-yu-gitde-jing-tai-bo-ke.html">more ...</a>
                 </div>
             </article>
@@ -216,6 +244,8 @@ Buskined bioinformatics            </a>
               <ul class="list-group" id="social">
                 <li class="list-group-item"><a href="http://runsheng.github.io"><i class="fa fa-blog-square fa-lg"></i> blog</a></li>
                 <li class="list-group-item"><a href="http://www.weibo.com/u/2176571792"><i class="fa fa-weibo fa-lg"></i> weibo</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/Runsheng_li"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+                <li class="list-group-item"><a href="https://www.researchgate.net/profile/Runsheng_Li2"><i class="fa fa-research-gate-square fa-lg"></i> Research Gate</a></li>
               </ul>
             </li>
 
@@ -224,13 +254,13 @@ Buskined bioinformatics            </a>
             <li class="list-group-item"><a href="http://runsheng.github.io/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://runsheng.github.io/tag/bioinformatics.html">
-                            bioinformatics
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
                         <a href="http://runsheng.github.io/tag/python.html">
                             python
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="http://runsheng.github.io/tag/bioinformatics.html">
+                            bioinformatics
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
@@ -276,7 +306,7 @@ Buskined bioinformatics            </a>
    <div class="container">
       <hr>
       <div class="row">
-         <div class="col-xs-10">&copy; 2015 Runsheng
+         <div class="col-xs-10">&copy; 2016 Runsheng
             &middot; Powered by <a href="https://github.com/DandyDev/pelican-bootstrap3" target="_blank">pelican-bootstrap3</a>,
             <a href="http://docs.getpelican.com/" target="_blank">Pelican</a>,
             <a href="http://getbootstrap.com" target="_blank">Bootstrap</a>         </div>

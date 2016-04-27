@@ -99,14 +99,14 @@ Buskined bioinformatics            </a>
 <p>网页版本很漂亮读起来也很不错甚至可以本地编译网站(Ruby based)，但是我辈diaosi还是想看pdf。</p>
 <p>Hadley其实写了build-book.r，只要有R和LaTeX就可以生成pdf，步骤简介如下(看了<a href="http://brettklamer.com/diversions/statistical/compile-hadleys-r-packages-to-a-pdf/">Brett Klamer的blog</a>, 一路走下来,果断没成...稍微改了下步骤):</p>
 <h3>1. 下载</h3>
-<div class="highlight"><pre><span class="n">git</span> <span class="n">clone</span> <span class="n">https</span><span class="o">:</span><span class="c1">//github.com/hadley/r-pkgs/</span>
+<div class="highlight"><pre>git clone https://github.com/hadley/r-pkgs/
 </pre></div>
 
 
 <p>可以看到/book/目录下的build-book.r, 里面需要载入rmarkdown和bookdown两个library.所以下载之.</p>
 <h3>2. devtool安装rmarkdown和bookdown</h3>
-<div class="highlight"><pre><span class="n">install</span><span class="p">.</span><span class="n">packages</span><span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span> <span class="err">#</span> <span class="err">先装</span><span class="n">devtools</span>
-<span class="n">devtools ...</span></pre></div>
+<div class="highlight"><pre>install.packages<span class="p">(</span><span class="s">&quot;devtools&quot;</span><span class="p">)</span> <span class="c1"># 先装devtools</span>
+devtools<span class="o">::</span>install_github ...</pre></div>
                     <a class="btn btn-default btn-xs" href="http://runsheng.github.io/r-packages-xin-shu-pdfzi-xing-bian-yi-ubuntu-1404.html">more ...</a>
                 </div>
             </article>
@@ -130,6 +130,8 @@ Buskined bioinformatics            </a>
               <ul class="list-group" id="social">
                 <li class="list-group-item"><a href="http://runsheng.github.io"><i class="fa fa-blog-square fa-lg"></i> blog</a></li>
                 <li class="list-group-item"><a href="http://www.weibo.com/u/2176571792"><i class="fa fa-weibo fa-lg"></i> weibo</a></li>
+                <li class="list-group-item"><a href="https://twitter.com/Runsheng_li"><i class="fa fa-twitter-square fa-lg"></i> twitter</a></li>
+                <li class="list-group-item"><a href="https://www.researchgate.net/profile/Runsheng_Li2"><i class="fa fa-research-gate-square fa-lg"></i> Research Gate</a></li>
               </ul>
             </li>
 
@@ -138,13 +140,13 @@ Buskined bioinformatics            </a>
             <li class="list-group-item"><a href="http://runsheng.github.io/tags.html"><h4><i class="fa fa-tags fa-lg"></i><span class="icon-label">Tags</span></h4></a>
                 <ul class="list-group " id="tags">
                     <li class="list-group-item tag-1">
-                        <a href="http://runsheng.github.io/tag/bioinformatics.html">
-                            bioinformatics
-                        </a>
-                    </li>
-                    <li class="list-group-item tag-1">
                         <a href="http://runsheng.github.io/tag/python.html">
                             python
+                        </a>
+                    </li>
+                    <li class="list-group-item tag-2">
+                        <a href="http://runsheng.github.io/tag/bioinformatics.html">
+                            bioinformatics
                         </a>
                     </li>
                     <li class="list-group-item tag-4">
